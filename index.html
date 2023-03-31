@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Auto Calculate Price in Javascript</h1>
+
+
+        <label class="w3-text-green"><b>Number Of Pin</b></label>
+
+        <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+			<option value="" disabled selected>Choose your option</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+
+        <label><b>Total Amount</b></label>
+        <input class="w3-input w3-border" name="tot_amount" id="total_amount" type="text" readonly>
+
+        <script>
+            function calculateAmount(val) {
+
+                var total_price = val * 10;
+                
+                /*display the result*/
+                var divobj = document.getElementById('total_amount');
+                divobj.value = total_price;
+            }
+        </script>
+        <body>
+</html>
